@@ -27,6 +27,10 @@ def insert(HashTable,key):
     if search_hash(HashTable,key)==False :
         hash_key=Hashing(key);
         HashTable[hash_key].append(key);
+#Remove values
+def remove(HashTable, key) :
+    hash_key=Hashing(key);
+    HashTable[hash_key].remove(key);
     
 
 # Driver Code
@@ -36,7 +40,8 @@ insert(HashTable, 20)
 insert(HashTable, 9)
 insert(HashTable, 21)
 insert(HashTable, 21)
-if search_hash(HashTable,1):
+remove(HashTable,9)
+if search_hash(HashTable,9):
     print("10 availiable")
   
 display_hash (HashTable)
